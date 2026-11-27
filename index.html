@@ -13,21 +13,7 @@
     <link rel="icon" href="../assets/crest.png">
     <link rel="stylesheet" href="style/style.css">
 
-    <script>
-        let savedTheme = localStorage.getItem("wrps_theme");
 
-        if (savedTheme) {
-            document.documentElement.dataset.theme = savedTheme;
-        } 
-        else {
-            if (matchMedia("(prefers-color-scheme: dark)").matches) {
-                document.documentElement.dataset.theme = "dark";
-            } 
-            else {
-                document.documentElement.dataset.theme = "light";
-            }
-        }
-    </script>
 
 </head>
 
