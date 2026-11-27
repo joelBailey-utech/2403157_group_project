@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<!-- Joel Bailey | ID 2403157 | Lab: Friday 7-9 | Other group members: add names, IDs, lab times here -->
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contact us | Windward Road Primary School</title><link rel="icon" href="../assets/crest.png"><link rel="stylesheet" href="../style/style.css"><script src="../js/style.js"></script></head>
+<body><header id="site-header"></header>
+<main><h1>Contact us</h1><p id="msg" role="status"></p>
+<form id="cf"><label>Full name<input name="n" required pattern="[A-Za-z .&#39;-]{3,50}" placeholder="Jane Brown" title="3-50 letters"></label>
+<label>Email<input type="email" name="e" required placeholder="jane@example.com"></label>
+<label>Phone (876)<input type="tel" name="p" required pattern="\(?876\)?[\- ]?[0-9]{3}[\- ]?[0-9]{4}" placeholder="876-555-0123" title="Format 876-555-0123"></label>
+<label>Reason<select name="r" required><option value="">Choose one</option><option>Admissions</option><option>Fees</option><option>General</option></select></label>
+<label>Message<textarea name="m" rows="5" required minlength="10" maxlength="500" placeholder="At least 10 characters"></textarea></label>
+<button class="btn">Send message</button></form></main>
+<footer id="site-footer"></footer>
+
+</body></html>
