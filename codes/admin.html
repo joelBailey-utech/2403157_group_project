@@ -20,11 +20,21 @@
     <link rel="stylesheet" href="../style/style.css">
 
     <script>
-        document.documentElement.dataset.theme =
-            localStorage.getItem("wrps_theme") ||
-            (matchMedia("(prefers-color-scheme:dark)").matches
-                ? "dark"
-                : "light");
+        let savedTheme = localStorage.getItem("wrps_theme");
+
+        if (savedTheme) {
+
+            document.documentElement.dataset.theme = savedTheme;
+
+        } else if (matchMedia("(prefers-color-scheme:dark)").matches) {
+
+            document.documentElement.dataset.theme = "dark";
+
+        } else {
+
+            document.documentElement.dataset.theme = "light";
+
+        }
     </script>
 
 </head>
@@ -70,6 +80,7 @@
 
                 <label>
                     Class
+
                     <select name="cls">
                         <option>Grade 1</option>
                         <option>Grade 2</option>
@@ -82,6 +93,7 @@
 
                 <label>
                     Semester cohort
+
                     <select name="sem">
                         <option>Semester 1 2026</option>
                         <option>Semester 2 2026</option>
@@ -95,6 +107,7 @@
 
                 <label>
                     Tuition (J$)
+
                     <input
                         type="number"
                         name="tuition"
@@ -113,9 +126,7 @@
             <h2>Registered students</h2>
 
             <div class="wrap">
-
                 <table id="st"></table>
-
             </div>
 
         </section>
@@ -148,7 +159,6 @@
 
                 <label>
                     Student
-
                     <select name="sid" id="ps"></select>
                 </label>
 
@@ -170,9 +180,7 @@
             </form>
 
             <div class="wrap">
-
                 <table id="lt"></table>
-
             </div>
 
         </section>
